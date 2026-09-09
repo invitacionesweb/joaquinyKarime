@@ -1,0 +1,721 @@
+:root {
+    --color-principal:#F9F7F2;
+    --color-secundario:#D0BCA1;
+    --color-terciario:#BEA587;
+    --font-principal:'Ibarra Real Nova', serif;
+    --font-secundaria:'Ibarra Real Nova', serif;
+    --font-terciaria:'MiTipografia', sans-serif;
+}
+@font-face {
+  font-family: 'MiTipografia';
+  src: url('WhisperMelody-Regular.otf') format('woff2'),
+       url('fonts/MiTipografia.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+    background-color: var(--color-principal);
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    min-width: 320px;
+    overflow-x: unset;
+
+}
+
+/* TODO AUIDO */
+.audiodiv {
+    position: fixed;
+    TOP: 20px;
+    right: 20px;
+    background-color: var(--color-terciario);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    animation: bounce;
+    animation-duration:2s;
+    animation-iteration-count: unset;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+.audiodiv img {
+    padding: 3px 0 0 0;
+    margin: 0;
+    width: 60px;
+    height: 60px;
+}
+.play {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Ocultar los controles nativos del audio */
+audio::-webkit-media-controls {
+    display:none !important;
+}
+
+audio::-webkit-media-controls-panel {
+    display:none !important;
+}
+
+audio::-webkit-media-controls-play-button {
+    display:none !important;
+}
+
+audio::-webkit-media-controls-start-playback-button {
+    display:none !important;
+}
+
+audio::-webkit-media-controls-enclosure {
+    display:none !important;
+}
+
+audio::-webkit-media-controls-current-time-display {
+    display:none !important;
+}
+
+body p {
+    font-family: var(--font-secundaria);
+    padding: 0;
+
+}
+body h2 {
+    font-family: var(--font-principal);
+    padding: 0;
+}
+
+/* Estilos para la flecha (colÃ³calos aquÃ­ o en un archivo de estilos externo) */
+#scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+  }
+  
+  #scroll-to-top img {
+    width: 40px; /* Ajusta el tamaÃ±o segÃºn tu Ã­cono */
+    height: 40px;
+    cursor: pointer;
+  }
+
+  
+header {
+    width: 100%;
+    height: 100vh;
+    padding: auto;
+    background-image: url(./img-editables/desktop2.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-attachment: fixed;
+}
+
+.novios {
+    animation-name: texto;
+    animation-duration: 5s;
+
+
+}@keyframes texto {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+.novios .phone { 
+    display: none;
+}
+
+.contador {
+    display: flex;
+    color: var(--color-principal);
+    background-color: var(--color-secundario);
+    justify-content: center;
+    padding: 30px 0;
+    margin: 0;
+  }
+
+  .bloque {
+    text-align: center;
+    margin: 0 10px; /* Añadido espacio entre bloques para mejorar la apariencia */
+  }
+  
+  .numero {
+    font-size: 3em;
+    font-weight: 400;
+  }
+  
+  .etiqueta {
+    font-size: 1.2em;
+    font-family: var(--font-principal);
+  }
+  
+  .boton {
+    border: 1px solid var(--color-terciario);
+    background-color: var(--color-terciario);
+    color: var(--color-principal);
+    padding: 10px 30PX;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-family: var(--font-terciaria);
+    border-radius: 50PX;
+
+ }
+ .boton:hover {
+     color: var(--color-terciario);
+     background-color: var(--color-principal);
+     border: 1px solid var(--color-terciario);
+     padding: 10px 30PX;
+     text-align: center;
+     text-decoration: none;
+ }
+ .boton1 {
+    border: 1px solid var(--color-principal);
+    background-color: var(--color-principal);
+    color: var(--color-terciario);
+    padding: 10px 30PX;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-family: var(--font-terciaria);
+    border-radius: 50PX;
+
+ }
+ .boton1:hover {
+     color: var(--color-principal);
+     background-color: var(--color-terciario);
+     border: 1px solid var(--color-principal);
+     padding: 10px 30PX;
+     text-align: center;
+     text-decoration: none;
+ }
+
+ .namephones {
+    display: none;
+     
+ }
+ .icon {
+     width: 60px;
+     margin-bottom: 10px;
+ }
+
+.bloque {
+   
+    font-family: var(--font-principal);
+}
+.lovestory { 
+    background-image: url(./figuras/caja2.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 40px 40px;
+    margin: 0;
+    text-align: center;
+   
+}
+.ubicacion-bloque p{
+font-size: 1.3em;
+}
+.lovestory h2 {
+    font-family: var(--font-terciaria);
+}
+.lovestory .text {
+    padding: 20px 20px;
+    font-size: 1.1em;
+    max-width: 500PX;
+    margin: auto;
+    background-color: rgba(246, 243, 239, 0.7); /* Convierte el color hexadecimal a valores numéricos y ajusta la transparencia */
+    color: var(--color-terciario);
+    border-radius: 8px;
+    
+}
+
+.ubicacion {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 80px 0 80px 0 ;
+    background-color: var(--color-principal);
+    background-image: url(./img-editables/background.png);
+    background-position: center;
+    background-size: cover;
+}
+.fecha {
+    width: 320px;
+    max-width: 320px;
+    padding: 40px 0 0 0;
+}
+.fecha-fecha {
+    
+    display: flex;
+    flex-direction: center;
+    align-items: center;
+    padding: 20px 0 0 0;
+    margin: auto;
+    
+}
+.fecha-ubicacion {
+    width: 330px;
+    padding: auto;
+    margin: auto;
+}
+
+.ubicacion-bloque {
+    width: 40%;
+    text-align: center;
+    padding: 0px 0 20px 0;
+    color: var(--color-terciario);
+}
+.bloquedos {
+    padding: 0px 0 0px 0;
+}
+.ubicacion-bloque h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 2em;
+    font-weight: bolder;
+    font-family: var(--font-terciaria);
+   
+}
+.ubicacion-bloque p {
+    padding:10px 40px 30px 40px;
+    font-size: 1.3em;
+    max-width: 400px;
+    margin: auto;
+}
+.bloquedos p {
+    padding:0px 40px 0px 40px;
+    font-size: 1.3em;
+    max-width: 400px;
+    margin: auto;
+}
+.galeria {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    
+}
+.galeria img {
+    width: 25vw;
+}
+.galeria2 {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    
+}
+.galeria2 img {
+    width: 25vw;
+}
+.timing { 
+    width: 100%;
+    height: 80vh;
+    background-image: url(./img-editables/timingpc.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+
+.dresscode {
+    width: 100%;
+    background-color: var(--color-secundario);
+    color: var(--color-principal);
+    text-align: center;
+    padding: 40px 0;
+}
+.dresscode h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 1.6em;
+    font-family: var(--font-terciaria);
+}
+.dresscode p {
+    padding:6px 40px 6px 40px;
+    font-size: 1.3em;
+    margin: 0 0 0px 0;
+}
+.palette {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+   
+} 
+.caja {
+    background-image: url(./figuras/caja2.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.dos { 
+    width: 100%;
+    padding: 30px 0;
+    gap: 10px;
+    background-color: transparent;
+    max-width: 500px;
+    margin: 50px 0 50px 0;
+    
+}
+.dos p { 
+    max-width: 500px;
+    text-align: center;
+    margin: auto;
+    font-size: 1.1em;
+    max-width: 400px;
+}
+.tres { 
+    width: 100%;
+    padding: 60px 0;
+    gap: 10px;
+    background-color: var(--color-terciario);
+    color: var(--color-principal);
+
+}
+.tres p { 
+    max-width: 500px;
+    text-align: center;
+    margin: auto;
+    font-size: 1.1em;
+}
+
+.rsvpbotones {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+}
+.quote {
+    background-color: var(--color-principal);
+    color: var(--color-terciario);
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+footer {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    background-color: var(--color-secundario);
+    color: var(--color-principal);
+    padding: 40px 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+footer .contenido{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    
+}
+footer img {
+    width: 60px;
+}
+.contenido ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    padding:0 20px 20px 20px;
+    margin: 0;
+
+}
+
+.contenido a {
+    color: var(--color-principal);
+}
+.contenido a:hover {
+    color: var(--color-secundario);
+}
+
+.caja p {
+    font-size: 1.3em;
+}
+/*FORMS*/
+.forms {
+    background-color: var(--color-secundario);
+    text-align: center;
+    padding: 40px 0 40px 0;
+}
+
+.forms h2 {
+    text-align: center;
+    font-weight: 100;
+    font-size: 2.2em;
+    padding: 10px 0 0 0;
+    margin: 0;
+    color: var(--color-principal);
+    font-family: var(--font-terciaria);
+}
+.forms p {
+    font-size: 1.3em;
+    padding: 10px 0 20px 0;
+    margin: 0;
+    color: var(--color-principal);
+}
+.information-bloque .botones {
+    width: 140px;
+    height: 110px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 0;
+    margin: auto;
+    gap: 10px;
+}
+.information-bloque .botones a {
+    width: 100px;
+}
+label .grupo-opciones {
+    font-family: var(--font-secundaria);
+    color: var(--color-principal);
+}
+.formulario {
+    max-width: 500px;
+  width: 90vw;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.formulario .formtitle {
+    font-family: var(--font-secundaria);
+    color: var(--color-principal);
+ font-size: 1.4em;
+     padding: 0;
+    margin: 0;
+}
+
+.radio-group {
+  display: flex;
+  align-items: center;
+  padding: 0 25%;
+  justify-content: start;
+  gap: 100px;
+  font-size: 1.2em;
+}
+
+.grupo-opciones{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap:0px;
+  padding: 0;
+  margin: 0;
+}
+
+.radio-option {
+  display: flex;
+  width: 10px;
+  align-items: center;
+  font-family: var(--font-secundaria); /* CambiÃ¡ esto por el nombre real de tu fuente secundaria */
+  color: var(--color-principal); /* Este es tu color principal, definilo antes o reemplazalo por un valor hex como #A3A87B */
+  font-size: 1em;
+  gap: 6px;
+}
+
+.radio-option input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 14px;
+  height: 14px;
+  min-width: 14px;
+  min-height: 14px;
+  border: 2px solid var(--color-principal);
+  border-radius: 50%;
+  background-color: transparent;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.radio-option input[type="radio"]:checked {
+  background-color: var(--color-principal);
+  border-color: var(--color-principal);
+}
+.etiqueta {
+    font-family: var(--font-secundaria);
+    padding: 0;
+    margin: 0;
+}
+.formulario {
+    padding: 0 auto;
+    margin: 0 auto;
+    text-align: center;
+}
+.formulario input,
+.formulario select,
+.formulario textarea {
+  background-color: var(--color-principal);
+  border: none;
+  border-radius: 12px;
+  padding: 0.8rem;
+  font-size: 1rem;
+  color: #a3a49d;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.formulario input::placeholder,
+.formulario textarea::placeholder {
+  color: var(--gris-placeholder);
+}
+.formulario input:focus,
+.formulario select:focus,
+.formulario textarea:focus {
+  outline: none;
+  border: 2px solid #d4e2cf;
+}
+.formulario textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+.forms .boton {
+    font-size: 1em;
+}
+
+.end {
+
+    width: 100%;
+    max-width: 230px;
+    height:auto;
+    padding: auto;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    
+   
+
+}
+.end-names img{
+    width: 100vw;
+    height: auto;
+    max-width: 200px;
+    padding: 0;
+    margin: 0;
+   
+}
+
+
+@media (max-width: 600px) {
+    header {
+        background-image: url(./img-editables/namephone.png);
+        background-attachment: unset;
+        text-align: center;
+
+    }
+
+.namephones {
+    display: block;
+    width: 100vw;
+    height: 100%;
+}
+
+    .novios .desk { 
+    display: none;
+    }
+
+    .ubicacion {
+        flex-direction: column;
+        padding: 30px 0 30px 0 ;
+    }
+    .ubicacion-bloque {
+        width: 100%;
+    }
+    .lovestory { 
+        background-image: url(./img-editables/background.png);
+       
+       
+    }
+    .f4 {
+        display: none;
+    }
+    .galeria {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr; 
+    }
+
+    .galeria img {
+        width: 100vw;
+    }
+    .caja {
+        background-image: url(./figuras/caja1.png);
+        
+    }
+    .galeria2 {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        
+    }
+    .galeria2 img {
+        width: 100vw;
+    }
+
+.timing { 
+    width: 100%;
+    height: 90vh;
+    background-image: url(./img-editables/TIMING.png);
+    
+}
+    .dos { 
+        width: 100%;
+        padding: 30px 0;
+        gap: 10px;
+        background-color: transparent;
+        max-width: 500px;
+        margin: 0;
+        
+    }
+    .quotes {
+        background-attachment: unset;
+        background-position: center;
+    }
+    
+    .rsvpbotones {
+        flex-direction: column;
+        padding: 0 60px;
+    }
+
+     .rsvpbotones .boton1 {
+         width: 140px;
+         margin: auto;
+     }
+    .end {
+        background-attachment: unset;
+        height:180px;
+
+    }
+
+    
+
+}

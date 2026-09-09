@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karime y Joaquin</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.0/font/bootstrap-icons.css" integrity="sha384-7ynz3n3tAGNUYFZD3cWe5PDcE36xj85vyFkawcF6tIwxvIecqKvfwLiaFdizhPpN" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.16/mediaelementplayer.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <header>
+       <div class="novios">
+        <img class="namephones" src="./img-editables/namefront.png" alt="">
+
+       </div>
+    </header>
+
+    <div class="audiodiv">
+        <audio id="myAudio" preload="auto">
+            <source src="/lovest.mp3" type="audio/mpeg">
+        </audio>
+        <div id="playPauseBtn" class="play">
+            <img src="./imgs/notamusical.png" alt="Icono de música">
+        </div>
+    </div>
+
+    <div class="galeria">
+      <img class="f1" src="./img-editables/1.png" alt="Novios">
+      <img class="f4" src="./img-editables/1.png" alt="Novios">
+      <img class="f4" src="./img-editables/1.png"  alt="Novios">
+      <img class="f4" src="./img-editables/1.png"  alt="Novios">
+  </div>
+    <div class="contador">
+        <div class="bloque">
+          <div id="dias" class="numero"></div>
+          <div class="etiqueta">Días</div>
+        </div>
+
+        <div class="bloque">
+          <div id="horas" class="numero"></div>
+          <div class="etiqueta">horas</div>
+        </div>
+
+        <div class="bloque">
+          <div id="minutos" class="numero"></div>
+          <div class="etiqueta">minutos</div>
+        </div>
+
+        <div class="bloque">
+          <div id="segundos" class="numero"></div>
+          <div class="etiqueta">segundos</div>
+        </div>
+    </div>
+<!--
+    <div class="audiodiv">
+        <audio controls .mejs-container autoplay src="./pero-te-conoci.mp3"></audio >
+    </div>
+-->
+    <div class="lovestory">
+        <div  class="text">
+            <h2>Nuestra historia</h2>
+            <p data-aos="fade-in" >Hace 6 años, nuestros caminos se cruzaron en este mismo lugar, sin imaginar todo lo que la vida tenía preparado para nosotros.
+<br>
+Desde aquel día hemos compartido risas, aventuras, viajes, sueños y también esos pequeños momentos que, sin darnos cuenta, terminan convirtiéndose en los más importantes. Hemos crecido, cambiado y aprendido el uno del otro, mientras nuestro amor encontraba nuevas razones para seguir eligiéndonos.
+<br>
+Hoy volvemos al lugar donde comenzó todo, pero esta vez con una certeza que entonces no podíamos imaginar: queremos seguir caminando de la mano, compartiendo la vida y todo lo que venga.
+<br>
+Porque después de tantos momentos, tantos sueños y tantos caminos recorridos, sabemos que nuestro lugar favorito siempre será estar juntos.
+<br>
+Y así, en el mismo lugar donde comenzó nuestro camino, damos el paso más bonito de nuestras vidas.
+<br>
+Hoy comienza nuestro para siempre. 🤍
+      </p>
+
+           <h2>J & K</h2>
+        </div>
+    </div>
+    <div class="galeria">
+      <img class="f1" src="./img-editables/2.png" alt="Novios">
+      <img class="f4" src="./img-editables/2.png" alt="Novios">
+      <img class="f4" src="./img-editables/2.png" alt="Novios">
+      <img class="f4" src="./img-editables/2.png" alt="Novios">
+
+
+  </div>
+    <div class="ubicacion">
+        <div data-aos="fade-up"  class="ubicacion-bloque">
+            <img class="icon" src="./figuras/hotel.png" alt="iglesia">
+            <h2>Estadia</h2>
+            <p>Esperamos compartir contigo un fin de semana inolvidable. <br> Del 30 de Octubre al 01 de Noviembre. <br>Barceló Maya Beach</p>
+
+            <a class="boton" href="https://www.google.com/maps/dir//Barcel%C3%B3+Maya+Beach+-+All+Inclusive,+Chetmal-Cancun+Puerto+Ju%C3%A1rez+Km.+266,3+Xpuha+Q+Xpu-H%C3%A1,+77750+Playa+del+Carmen,+Q.R.,+M%C3%A9xico/@20.4788318,-87.2624813,3272m/data=!3m1!1e3!4m21!1m11!3m10!1s0x8f4e37f2b7217d7b:0x846c97e9837b8cb5!2sBarcel%C3%B3+Maya+Beach+-+All+Inclusive!5m2!4m1!1i2!8m2!3d20.4858984!4d-87.2463911!15sCmhDYXJyZXRlcmEgQ2hldHVtYWwtUHVlcnRvIEp1w6FyZXogS20uIDI2NiwzLCBYcHUtSGEgLyBQbGF5YSBkZWwgQ2FybWVuLCBRdWludGFuYSBSb28sIEMuUC43Nzc1MCwgTcOpeGljb1piImBjYXJyZXRlcmEgY2hldHVtYWwgcHVlcnRvIGp1w6FyZXoga20gMjY2IDMgeHB1IGhhIHBsYXlhIGRlbCBjYXJtZW4gcXVpbnRhbmEgcm9vIGNwIDc3NzUwIG3DqXhpY2-SAQVob3RlbJoBRENpOURRVWxSUVVOdlpFTm9kSGxqUmpsdlQyNXNlV0ZYYkVaUk1rcHlUVE5XVVUxcVRURmtTRlpZWTFSc2FWTkhZeEFC4AEA-gEECCkQRA!16s%2Fg%2F1hm560x12!4m8!1m0!1m5!1m1!1s0x8f4e37f2b7217d7b:0x846c97e9837b8cb5!2m2!1d-87.2463911!2d20.4858984!3e0?entry=ttu&g_ep=EgoyMDI2MDkwMi4wIKXMDSoASAFQAw%3D%3D">CÓMO LLEGAR</a>
+        </div>
+
+    </div>
+    <div class="galeria">
+      <img class="f1" src="./img-editables/3.png" alt="Novios">
+      <img class="f4" src="./img-editables/3.png" alt="Novios">
+      <img class="f4" src="./img-editables/3.png" alt="Novios">
+      <img class="f4" src="./img-editables/3.png" alt="Novios">
+
+
+  </div>
+    <div data-aos="fade-in" class="timing">
+
+    </div>
+    <div class="galeria">
+      <img class="f1" src="./img-editables/4.png" alt="Novios">
+      <img class="f4" src="./img-editables/4.png" alt="Novios">
+      <img class="f4" src="./img-editables/4.png" alt="Novios">
+      <img class="f4" src="./img-editables/4.png" alt="Novios">
+
+
+  </div>
+
+</div>
+    <div class="ubicacion">
+      <div data-aos="fade-up"  class="ubicacion-bloque bloquedos">
+            <img class="fecha" src="./img-editables/fecha.png" alt="iglesia">
+
+        </div>
+        <div data-aos="fade-up"  class="ubicacion-bloque bloquedos">
+            <img class="icon" src="./img-editables/anillos.png" alt="iglesia">
+            <h2>Ceremonia - 15:00 Hrs </h2>
+            <p>Nuestra Señora de Guadalupe.</p>
+        </div>
+        <div data-aos="fade-up"  class="ubicacion-bloque">
+            <img class="icon"  src="./figuras/fiesta.png" alt="fiesta">
+            <h2>Fiesta - 18:30 Hrs</h2>
+            <p>Restaurante Palmeras</p>
+        </div>
+    </div>
+     </div>
+    <div   class="dresscode">
+        <h2 data-aos="fade-in" >DRESS CODE <br> FORMAL PLAYERO / SUMMER CHIC</h2>
+        <p data-aos="fade-in">🤍 Blanco reservado para la novia. <br>
+🤎 Beige reservado para el novio.</p>
+    </div>
+    <div class="galeria">
+      <img class="f1" src="./img-editables/5.png" alt="Novios">
+      <img class="f4" src="./img-editables/5.png" alt="Novios">
+      <img class="f4" src="./img-editables/5.png" alt="Novios">
+      <img class="f4" src="./img-editables/5.png" alt="Novios">
+
+
+  </div>
+    <div class="ubicacion">
+        <div data-aos="fade-up"  class="ubicacion-bloque">
+            <img class="icon" src="./figuras/instagram.png" alt="instagram">
+            <h2>Recuerdos</h2>
+            <p>¡Queremos revivir cada momento! 📸✨ Comparte las fotos y videos de nuestra boda en el siguiente álbum.</p>
+            <a class="boton" href="https://drive.google.com/drive/folders/1NgoBMr_NZFHT6ETgTugWHB1YE93Sz3US">nuestro álbum</a>
+        </div>
+
+    </div>
+
+      <div class="galeria">
+      <img class="f1" src="./img-editables/6.png" alt="Novios">
+      <img class="f4" src="./img-editables/6.png" alt="Novios">
+      <img class="f4" src="./img-editables/6.png" alt="Novios">
+      <img class="f4" src="./img-editables/6.png" alt="Novios">
+
+
+  </div>
+<!--
+      <div class="caja">
+        <div data-aos="fade-in" class="ubicacion-bloque dos" >
+            <img class="icon"  src="./figuras/giftcard.png" alt="giftcard">
+            <h2>TE AYUDAMOS</h2>
+            <p>Si queres ampliar tu experiencia en México o consultar por los pasajes aéreos contactannos.
+            </p>
+            <a class="boton" href="https://wa.link/z0dy55">  CONTACTAR A NOE  </a>
+           <br><br><br> <a class="boton" href="https://wa.link/8a1zls">CONTACTAR A MARIAN</a>
+        </div>
+    </div>
+    -->
+<div class="caja">
+        <div  class="ubicacion-bloque dos" >
+            <img  data-aos="fade-up"  class="icon"  src="/imgs/FLOR.png" alt="giftcard">
+            <h2  data-aos="fade-up" >Regalos</h2>
+            <p  data-aos="fade-up" >
+               Tu presencia es para nosotros el mejor regalo, pero si deseas hacernos un obsequio, ayudanos a cumplir nuestros sueños:
+               <br><br>
+               Liverpool – Mesa de regalos #52015365 <br>
+              </p>
+
+           <br>
+            <a  data-aos="fade-up"  class="boton" onclick="copyToClipboard('722969010992040901')" >CLAVE MERCADO PAGO</a> <br> <br><br>
+
+
+            <p  data-aos="fade-up" >Hace clic para copiar los datos de nuestra cuenta.
+               <br> Titular: Karime Assad Sanchez</p>
+        </div>
+    </div>
+ <div class="forms">
+      <img  data-aos="fade-up"  class="icon"  src="/imgs/iconoflor.png" alt="giftcard">
+
+  <h2 data-aos="fade-up">Cuéntanos un poco más...</h2>
+  <p data-aos="fade-up">Antes de la fiesta, queremos asegurarnos <br> de que no te falte nada. ¡Responde estás preguntitas! 🎉</p>
+
+<form name="asistenciaform" method="POST" action="https://script.google.com/macros/s/AKfycbzXdKracEMh6DURJZyRBUhHZvYAnHJk84EJDECLheo2ez4wGCENYeM1m4BrdVSuiisM/exec" class="formulario">    <input type="text" name="NOMBRE" placeholder="Nombre" required />
+    <input type="text" name="APELLIDO" placeholder="Apellido" required />
+
+    <select name="DIETA" required>
+      <option value="" disabled selected>¿Tenés alguna restricción alimentaria?</option>
+      <option value="Ninguna">Ninguna</option>
+      <option value="Vegetariano">Vegetariano</option>
+      <option value="Vegano">Vegano</option>
+      <option value="Celíaco">Celíaco</option>
+      <option value="Otra">Otra</option>
+    </select>
+
+
+
+    <input type="text" name="CANCION" placeholder="¿Qué canción no puede faltar en la fiesta?" />
+
+    <button type="submit" class="boton">ENVIAR</button>
+  </form>
+   <p data-aos="fade-up">Recuerda contestar esta información <br> antes del 25 de Septiembre.</p>
+
+</div>
+     <div class="galeria">
+      <img class="f1" src="./img-editables/2.png" alt="Novios">
+      <img class="f4" src="./img-editables/2.png" alt="Novios">
+      <img class="f4" src="./img-editables/2.png" alt="Novios">
+      <img class="f4" src="./img-editables/2.png" alt="Novios">
+
+
+  </div>
+    <div class="end">
+      <div class="end-names">
+        <img src="./img-editables/endnames.png" alt="">
+      </div>
+    </div>
+    </div>
+    <footer>
+        <div class="contenido">
+         <div>
+           <img src="./figuras/logosiquiero.png" alt="icono si quiero">
+             <p>Hecho con &hearts; <br>
+             &#169 <b>Si,quiero!</b> - invitaciones inteligentes.
+             <br> Todos los derechos reservados.</p>
+         </div>
+
+         <div class="contenido-list">
+             <ul>
+                 <li><a target="_blank" href="https://www.instagram.com/siquiero.arg/"><i class="bi bi-instagram"></i></a></li>
+                 <li><a target="_blank" href="https://www.facebook.com/Invitaciones-web-112187784608681"><i class="bi bi-facebook"></i></a></li>
+                 <li><a target="_blank" href="mailto:siquiero.invitaciones@gmail.com"><i class="bi bi-envelope"></i></a></li>
+               </ul>
+         </div>
+        </div>
+
+     </footer>
+
+      <script src="script.js"></script>
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+      <script src="./form.js"></script>
+      <script src="./reproductor.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.16/mediaelement-and-player.min.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script>
+
+    function copyToClipboard(text) {
+       const tempInput = document.createElement("input");
+       document.body.appendChild(tempInput);
+       tempInput.value = text;
+       tempInput.select();
+       document.execCommand("copy");
+       document.body.removeChild(tempInput);
+       alert(`Copiaste los datos de cuenta "${text}" a tu portapapeles`);
+     }
+   </script>
+   <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const audio = document.getElementById("myAudio");
+
+      // Escucha el primer scroll
+      const playOnScroll = () => {
+        audio.play().catch(e => {
+          console.warn("El navegador bloqueó la reproducción automática", e);
+        });
+        document.removeEventListener("scroll", playOnScroll); // Se ejecuta solo una vez
+      };
+
+      document.addEventListener("scroll", playOnScroll);
+    });
+  </script>
+</body>
+</html>
